@@ -41,7 +41,3 @@ Thumbs.db
 # Extras #
 ##########
 .sass-cache/*
-
-# Gemfile #
-###########
-Gemfile.lock

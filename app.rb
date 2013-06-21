@@ -12,17 +12,15 @@ get '/' do
   @sentences = Morel.all
   @sentences.shuffle!
 
-  haml :index
-end
+  words = []
 
-post '/new' do
-  post = Morel.new(params)
-
-  if post.valid?
-    if post.save
-      redirect '/'
-    end
+  @sentences.each do |sentence|
+    words.push(sentence)
   end
+
+  @words = words.shuffle
+
+  haml :index
 end
 
 not_found do

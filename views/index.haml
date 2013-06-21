@@ -3,14 +3,9 @@
   %h2 A very nice 'lorem ipsum' generator
 
 %section
-  %a#generate.button Generate
-
-/ %section
-/  %form{ action: '/new', method: 'post' }
-/    %input{ id: 'add-sentence', name: 'body', type: 'text' }
-/    %input{ type: 'submit', value: 'Add' }
+  %a#generate.button{ href: '/' } Generate
 
 %section
   %article.morel-ipsum
-    - @sentences.each do |sentence|
-      = sentence.body
+    - 5.times do
+      = @words
