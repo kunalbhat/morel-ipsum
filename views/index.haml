@@ -7,5 +7,5 @@
 
 %section
   %article.morel-ipsum
-    - 5.times do
-      = @words
+    - @words.each do |word|
+      = word.body

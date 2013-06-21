@@ -20,6 +20,14 @@ h2 {
   font-weight: normal;
 }
 
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // Global
 body {
   color: $color_text_dark;
