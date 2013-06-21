@@ -1,9 +1,11 @@
 // Variables
-$color_background_light:  #bdc3c7;
+$color_background_highlight: #f1c40f;
+$color_background_light:     #bdc3c7;
 
-$color_text_dark:         #2c3e50;
-$color_text_inverted:     #fff;
-$color_text_medium:       #7f8c8d;
+$color_text_dark:            #2c3e50;
+$color_text_inverted:        #fff;
+$color_text_light:           #bdc3c7;
+$color_text_medium:          #7f8c8d;
 
 
 // Typography
@@ -16,6 +18,7 @@ h1 {
 }
 
 h2 {
+  color: $color_text_light;
   font-size: 26px;
   font-weight: normal;
 }
@@ -71,4 +74,8 @@ article {
 
 .morel-ipsum {
   display: none;
+}
+
+span:hover {
+  background: lighten($color_background_highlight, 30%);
 }
