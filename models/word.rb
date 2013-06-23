@@ -1,8 +1,8 @@
-class Morel
+class Word
   include DataMapper::Resource
 
   property :id,     Serial
-  property :body,   Text
+  property :word,   String
 
   DataMapper.finalize
   DataMapper.auto_upgrade!

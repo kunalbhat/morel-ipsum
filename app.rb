@@ -6,10 +6,10 @@ require_relative 'config/datamapper'
 require_relative 'config/rack_coffee'
 require_relative 'config/sass'
 
-require_relative 'models/morel'
+require_relative 'models/word'
 
 get '/' do
-  @sentences = Morel.all
+  @sentences = Word.all
   @sentences.shuffle!
 
   words = []
