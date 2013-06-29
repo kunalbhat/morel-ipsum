@@ -3,15 +3,8 @@
   %h2 A very nice 'lorem ipsum' generator
 
 %section
-  %form
+  %form{ action: '/', name: 'generate_form', method: 'post' }
     %fieldset
-      %input{ name: 'lorem-ipsum-start', type: 'checkbox' } Begin with 'Lorem ipsum...'
-
-  %a#generate.button{ href: '/' } Generate
-
-%section
-  %article
-    - @paragraph.each do |sentence|
-      %span
-        - sentence.each do |string|
-          = string
+      %input{ name: 'sentences', type: 'text' }
+      /%input{ name: 'lorem-ipsum-start', type: 'checkbox' } Begin with 'Lorem ipsum...'
+      %input{ class: 'button', id: 'generate', type: 'submit', value: 'Generate' }

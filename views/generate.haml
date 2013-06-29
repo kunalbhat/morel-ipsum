@@ -1,0 +1,6 @@
+%section
+  %article
+    - @paragraph.each do |sentence|
+      %span
+        - sentence.each do |string|
+          = string

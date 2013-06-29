@@ -6,6 +6,10 @@ require_relative 'config/rack_coffee'
 require_relative 'config/sass'
 
 get '/' do
+  haml :index
+end
+
+get '/:sentences' do
   @words = ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing',
             'elit', 'nulla', 'placerat', 'metus', 'justo', 'in', 'bibendum', 'eros',
             'mollis', 'ut', 'proin', 'vel', 'enim', 'nisl', 'donec', 'et', 'orci', 'a',
@@ -19,7 +23,9 @@ get '/' do
 
   paragraph = []
 
-  (0..20).each do |x|
+  sentences = params[:symbol]
+
+  (0..sentences).each do |x|
     sentence = @words.sample(rand(5..15))
 
     paragraph.push(sentence)
@@ -27,7 +33,7 @@ get '/' do
 
   @paragraph = paragraph
 
-  haml :index
+  haml :generate
 end
 
 not_found do
