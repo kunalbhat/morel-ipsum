@@ -3,8 +3,7 @@
   %h2 A very nice 'lorem ipsum' generator
 
 %section
-  %form{ action: '/', name: 'generate_form', method: 'post' }
+  %form{ action: '/morel', name: 'generate_form', method: 'post' }
     %fieldset
       %input{ name: 'sentences', type: 'text' }
-      /%input{ name: 'lorem-ipsum-start', type: 'checkbox' } Begin with 'Lorem ipsum...'
       %input{ class: 'button', id: 'generate', type: 'submit', value: 'Generate' }

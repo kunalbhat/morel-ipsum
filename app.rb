@@ -9,7 +9,7 @@ get '/' do
   haml :index
 end
 
-get '/:sentences' do
+get '/morel' do
   @words = ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing',
             'elit', 'nulla', 'placerat', 'metus', 'justo', 'in', 'bibendum', 'eros',
             'mollis', 'ut', 'proin', 'vel', 'enim', 'nisl', 'donec', 'et', 'orci', 'a',
@@ -23,9 +23,7 @@ get '/:sentences' do
 
   paragraph = []
 
-  sentences = params[:symbol]
-
-  (0..sentences).each do |x|
+  (0..10).each do |x|
     sentence = @words.sample(rand(5..15))
 
     paragraph.push(sentence)
@@ -33,7 +31,7 @@ get '/:sentences' do
 
   @paragraph = paragraph
 
-  haml :generate
+  haml :morel
 end
 
 not_found do
